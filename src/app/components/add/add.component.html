@@ -1,0 +1,31 @@
+<p>Fazer Transferência</p>
+
+<div class="container">
+    <div class="col-4">
+        <form class="form">
+            <div class="mb-1">
+                <label class="form-label" for="nome">Nome do Destinatário</label>
+                <input [(ngModel)]="transfer.nome" class="form-control" type="text" name="nome" id="nome">
+            </div>
+            <div class="mb-1">
+                <label class="form-label" for="valor">Valor da Transferência</label>
+                <input [(ngModel)]="transfer.valor" class="form-control" type="number" name="valor" id="valor">
+            </div>
+            <div class="mb-1">
+                <label class="form-label" for="agencia">Agência</label>
+                <input [(ngModel)]="transfer.agencia" minlength="4" maxlength="4" class="form-control" type="number" name="agencia" id="agencia">
+            </div>
+            <div class="mb-1">
+                <label class="form-label" for="conta">Conta</label>
+                <input [(ngModel)]="transfer.conta" minlength="9" maxlength="11"  class="form-control" type="number" name="conta" id="conta">
+            </div>
+            <div class="mb-1">
+                <label class="form-label" for="digito">Dígito</label>
+                <input [(ngModel)]="transfer.digito" maxlength="1"  class="form-control" type="number" name="digito" id="digito">
+            </div>
+            <div class="mt-3">
+                <button (click)="adicionar()" class="btn btn-warning">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<h2>Transações</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Destinatário</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Conta</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let item of Bancos">
+        <th>{{item.id_transfer}}</th>
+        <td>{{item.nome}}</td>
+        <td>{{item.valor | currency: "BRL"}}</td>
+        <td>{{item.agencia}} {{item.conta}}-{{item.digito}}</td>
+        <td>
+            <button (click)="editar(item.id_transfer)" type="button" class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+            <button (click)="excluir(item.id_transfer)" type="button" class="btn btn-danger">Excluir</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
