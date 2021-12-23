@@ -5,8 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', redirectTo:'/banco', pathMatch:'full'},
-  {path: 'banco', component:BancoComponent},
+  {path: '', component:BancoComponent},
   {path: 'add', component:AddComponent},
   {path: 'edit/:id', component:EditComponent},
 ];
